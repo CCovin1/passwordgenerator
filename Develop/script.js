@@ -50,3 +50,32 @@ function getPasswordCharacters() {
   var includeNumeric = confirm("Include numeric characters?");
   var includeSpecial = confirm("Include special characters?");
 
+  // Validate at least one character type is selected
+  while (!(includeLowercase || includeUppercase || includeNumeric || includeSpecial)) {
+    alert("Please select at least one character type.");
+    includeLowercase = confirm("Include lowercase characters?");
+    includeUppercase = confirm("Include uppercase characters?");
+    includeNumeric = confirm("Include numeric characters?");
+    includeSpecial = confirm("Include special characters?");
+  }
+
+  // Add selected character types to passwordCharacters
+  if (includeLowercase) {
+    passwordCharacters += lowercaseChars;
+  }
+
+  if (includeUppercase) {
+    passwordCharacters += uppercaseChars;
+  }
+
+  if (includeNumeric) {
+    passwordCharacters += numericChars;
+  }
+
+  if (includeSpecial) {
+    passwordCharacters += specialChars;
+  }
+  
+
+  return passwordCharacters;
+}
