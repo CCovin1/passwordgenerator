@@ -22,3 +22,31 @@ function generatePassword() {
   }
 
   return password;
+}
+
+// Get password length from user
+function getPasswordLength() {
+  var length = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
+
+  while (isNaN(length) || length < 8 || length > 128) {
+    length = parseInt(prompt("Invalid length! Enter a number between 8 and 128:"));
+  }
+
+  return length;
+}
+
+// Get password characters based on user criteria
+function getPasswordCharacters() {
+  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numericChars = "0123456789";
+  var specialChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+
+  var passwordCharacters = "";
+
+  // Prompt for character types
+  var includeLowercase = confirm("Include lowercase characters?");
+  var includeUppercase = confirm("Include uppercase characters?");
+  var includeNumeric = confirm("Include numeric characters?");
+  var includeSpecial = confirm("Include special characters?");
+
