@@ -10,4 +10,15 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
+// Generate password based on user criteria
+function generatePassword() {
+  var passwordLength = getPasswordLength();
+  var passwordCharacters = getPasswordCharacters();
+  var password = "";
 
+  for (var i = 0; i < passwordLength; i++) {
+    var randomIndex = Math.floor(Math.random() * passwordCharacters.length);
+    password += passwordCharacters[randomIndex];
+  }
+
+  return password;
