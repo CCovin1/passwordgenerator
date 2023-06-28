@@ -2,6 +2,7 @@
 This is a simple password generator web application that allows users to generate secure passwords based on their desired criteria. It provides a user-friendly interface for selecting the password length and character types to include.
 
 ## Usage
+Link to site - https://ccovin1.github.io/passwordgenerator/
 ![Alt Text](images/screenshot.png)
 
 Open the "index.html" file in a web browser.
